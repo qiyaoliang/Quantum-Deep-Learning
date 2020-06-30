@@ -12,3 +12,5 @@ We hope to train a model that could be readily used for depth perception.
 We hope that we can continue to train and improve our model with more data and that our project would eventually be of use for deployment in real-world applications.
 
 *** Note: this is a project for submission in the IBM Qiskit Community SummerJam Quantum Hackathon (North Carolina) ***
+
+<center><img src="https://i.ebayimg.com/images/g/HH4AAOSwPW9esi90/s-l400.jpg"></center>
