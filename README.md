@@ -34,8 +34,7 @@ Beginning with a 1-qubit layer in the neural network architecture used to identi
 * **MNIST** In the most recent step of our project, we extended our learning about the Qiskit + Pytorch framework to classifying a higher number of classes, where we try classifying the digits from 0 to 7.  By tweaking hyperparameters and the number of qubits, we reached a **stunning 94.7% accuracy** on classifying 1200 previously unseen test images from 0 to 7.
   * Each subfolder is named by [0-5 or 0-7] [# of qubits] [# epochs] [% accuracy on test data], and each folder contains a screenclip of the final accuracy, the graph of training loss over each epoch, sample predicitons of test data, and the iPython notebook used.
   * Here is a sample of predictions for labels on test images from the [07 3qubit 10epochs 95%](https://github.com/liangqiyao990210/Quantum-Deep-Learning/tree/master/MNIST/0-7%203qubits%2010epochs%2095%25) run:
-    <p align="center">
-   <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/misc_images/Predictions%200%20to%207.png" width="60%">
+  <p align="center"><img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/misc_images/Predictions%200%20to%207.png" width="60%">
    
 ## Summary of Results & Discussion
 * Hybrid NNs could have potential applications for NISQ devices!! (Using Qiskit and Pytorch)
