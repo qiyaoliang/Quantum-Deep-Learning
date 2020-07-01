@@ -2,6 +2,7 @@
 ### Team Ube Pancake  
 ## Project Background and Overview  
 Recent advances in many fields have accelerated the demand for classification, regression, and detection problems from few 2D images/projections. Often, the heart of these modern techniques utilize neural networks, which can be implemented with deep learning algorithms. In our project, we implement and extend a quantum analog of the classical implementation following the example of Hybrid quantum-classical Neural Networks with PyTorch and Qiskit, [an example from the Qiskit Textbook](https://qiskit.org/textbook/ch-machine-learning/machine-learning-qiskit-pytorch.html#quantumlayer). 
+
 **For our most RECENT work, see folder [MNIST/0-7 3-qubit](https://github.com/liangqiyao990210/Quantum-Deep-Learning/tree/master/MNIST/0-7%203qubits%2010epochs%2095%25), where we train our hybrid quantum-classical network to get 94.7% accuracy on MNIST handwritten digits from 0 to 7. [Click here view our presentation slides (PDF).](https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/Quantum%20Deep%20Learning.pdf) [PPTX Version](https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/Quantum%20Deep%20Learning.pptx)**
 
 ## Implementation:  
