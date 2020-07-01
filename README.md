@@ -16,7 +16,7 @@ Beginning with a 1-qubit layer in the neural network architecture used to identi
 <p align="center">
    <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-u3/Figures/1-qubit%20u3-circuit.jpg" width="60%">
    
-    1. mnist01-u3.ipynb: heavily borrowed and improved from QizGloria, winners of 2019 Qiskit Camp Europe: https://github.com/BoschSamuel/QizGloria/blob/master/Notebooks/pytorch-qiskit-0.1-u3.ipynb
+  * mnist01-u3.ipynb: heavily borrowed and improved from QizGloria, winners of 2019 Qiskit Camp Europe: https://github.com/BoschSamuel/QizGloria/blob/master/Notebooks/pytorch-qiskit-0.1-u3.ipynb
 
 * **MNIST01-QFT:** Quantum Fourier Transform is commonly used in quantum algorithms, so we tried to implement this circuit next to train our model.
 <p align="center">
