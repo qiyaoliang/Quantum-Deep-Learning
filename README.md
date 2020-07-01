@@ -15,41 +15,25 @@ Beginning with a 1-qubit layer in the neural network architecture used to identi
 * **MNIST01-u3:** The first step involved improving the 1-qubit with a single Ry architecture to a more complex design: using a U3 transformation with parameters `theta`, `phi`, and `lambda`. Best accuracy: 97% on training data (100 images)<p align="center"><img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-u3/Figures/1-qubit%20u3-circuit.jpg" width="60%">
   * mnist01-u3.ipynb: heavily borrowed and improved from QizGloria, winners of 2019 Qiskit Camp Europe: https://github.com/BoschSamuel/QizGloria/blob/master/Notebooks/pytorch-qiskit-0.1-u3.ipynb
 
-* **MNIST01-QFT:** Quantum Fourier Transform is commonly used in quantum algorithms, so we tried to implement this circuit next to train our model.
-<p align="center">
-   <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-QFT/Figures/qft-circuit.jpg" width="60%">
-   
-    * mnist01-qft.ipynb: in progress implementation of Quantum Fourier Transform
+* **MNIST01-QFT:** Quantum Fourier Transform is commonly used in quantum algorithms, so we tried to implement this circuit next to train our model.<p align="center"><img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-QFT/Figures/qft-circuit.jpg" width="60%">
+  * mnist01-qft.ipynb: in progress implementation of Quantum Fourier Transform.
 
-* **MNIST01-ryN:** The next step was to extend the 1-qubit, Ry architecture of the Qiskit Textbook example. By making the design modular, we are able to easily change the number of qubits in the architecture by adjusting a single parameter (NUM_QUBITS) at the top of the file. Best accuracy: 100.0% accurate
-<p align="center">
-   <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-ryN/Figures/4-qubit%20circuit%20ryN.jpg" width="60%">
-   
-    * mnist01-ryN-v1.ipynb: first extension of 1-qubit architecture; uses hard-coded circuit (4 qubits). Neural net and quantum circuit not working.
-    
-    * mnist01-ryN-v2.ipynb: adjustable NUM_qubits, quantum layer returns NUM_QUBIT outputs representing expected value for the ZZ...Z operator, calculated from the counts returned by the circuit
-    
-    * mnist01-ryN-v3.ipynb: adjustable NUM_qubits, quantum layer returns 2^(NUM_QUBIT) outputs representing expected value of each unique permutation of measurements (e.g. '0000', '0001', '0010', etc.). Although this works well for classifying 0 and 1 (near perfect accuracy), this measurement does not scale well to classifications of a higher number of classes, such as of the digits 0-9 (see below in Summary & Discussion for explanation).
+* **MNIST01-ryN:** The next step was to extend the 1-qubit, Ry architecture of the Qiskit Textbook example. By making the design modular, we are able to easily change the number of qubits in the architecture by adjusting a single parameter (NUM_QUBITS) at the top of the file. Best accuracy: 100.0%!<p align="center"><img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-ryN/Figures/4-qubit%20circuit%20ryN.jpg" width="60%">
+  * mnist01-ryN-v1.ipynb: first extension of 1-qubit architecture; uses hard-coded circuit (4 qubits). Neural net and quantum circuit not working.
+  * mnist01-ryN-v2.ipynb: adjustable NUM_qubits, quantum layer returns NUM_QUBIT outputs representing expected value for the ZZ...Z operator, calculated from the counts returned by the circuit.
+  * mnist01-ryN-v3.ipynb: adjustable NUM_qubits, quantum layer returns 2^(NUM_QUBIT) outputs representing expected value of each unique permutation of measurements (e.g. '0000', '0001', '0010', etc.). Although this works well for classifying 0 and 1 (near perfect accuracy), this measurement does not scale well to classifications of a higher number of classes, such as of the digits 0-9 (see below in Summary & Discussion for explanation).
 
-* **MNIST01-bell:** Now, we try using the 'bell' circuit, which employs a dynamic number of qubits. This generates **ENTANGLEMENT**! We wanted to see how this would perform compared to the other circuits, which mostly have isolated qubits which don't interact with each other. The results were ***remarkable***! Best accuracy: 99.8% accurate (1712/1715 *previously unseen* test images correct) after training on 300 images.
-<p align="center">
-   <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-bell/Figures/4-qubit%20circuit%20bell.jpg" width="60%">
-   
-    * mnist01-bell.ipynb: current implementation uses 4 qubits and takes 1 measurement, resulting with 2 outputs (representing counts) for each of 0 and 1. Here are some sample predictions (again, for random, previously unseen test images):
+* **MNIST01-bell:** Now, we try using the 'bell' circuit, which employs a dynamic number of qubits. This generates **ENTANGLEMENT**! We wanted to see how this would perform compared to the other circuits, which mostly have isolated qubits which don't interact with each other. The results were ***remarkable***! Best accuracy: 99.8% accurate (1712/1715 *previously unseen* test images correct) after training on 300 images.<p align="center"><img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-bell/Figures/4-qubit%20circuit%20bell.jpg" width="60%">
+  * mnist01-bell.ipynb: current implementation uses 4 qubits and takes 1 measurement, resulting with 2 outputs (representing counts) for each of 0 and 1. Here are some sample predictions (again, for random, previously unseen test images):
    <p align="center">
       <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/misc_images/MNIST01-prediction-samples.jpg" width = "60%">
-
-* **MNIST01-QAOA:** Using 2 qubits, we try to create a circuit modeling the popular QAOA. Currently, the training loss does not converge, so fixes must be added before the model will train and predict well!
-<p align="center">
-   <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-QAOA/Figures/2-qubit%20circuit%20ryN.jpg" width="60%">
-   
-   * mnist01-QAOA.ipynb: Currently having problems running inside the model! Deprecated in favor of training MNIST, but potential improvements may be implemented in the future.
+    
+* **MNIST01-QAOA:** Using 2 qubits, we try to create a circuit modeling the popular QAOA. Currently, the training loss does not converge, so fixes must be added before the model will train and predict well!<p align="center"><img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-QAOA/Figures/2-qubit%20circuit%20ryN.jpg" width="60%">
+ * mnist01-QAOA.ipynb: Currently having problems running inside the model! Deprecated in favor of training MNIST, but potential improvements may be implemented in the future.
 
 * **MNIST** In the most recent step of our project, we extended our learning about the Qiskit + Pytorch framework to classifying a higher number of classes, where we try classifying the digits from 0 to 7.  By tweaking hyperparameters and the number of qubits, we reached a **stunning 94.7% accuracy** on classifying 1200 previously unseen test images from 0 to 7.
-
-    * Each subfolder is named by [0-5 or 0-7] [# of qubits] [# epochs] [% accuracy on test data], and each folder contains a screenclip of the final accuracy, the graph of training loss over each epoch, sample predicitons of test data, and the iPython notebook used.
-    
-    * Here is a sample of predictions for labels on test images from the [07 3qubit 10epochs 95%](https://github.com/liangqiyao990210/Quantum-Deep-Learning/tree/master/MNIST/0-7%203qubits%2010epochs%2095%25) run:
+  * Each subfolder is named by [0-5 or 0-7] [# of qubits] [# epochs] [% accuracy on test data], and each folder contains a screenclip of the final accuracy, the graph of training loss over each epoch, sample predicitons of test data, and the iPython notebook used.
+  * Here is a sample of predictions for labels on test images from the [07 3qubit 10epochs 95%](https://github.com/liangqiyao990210/Quantum-Deep-Learning/tree/master/MNIST/0-7%203qubits%2010epochs%2095%25) run:
     <p align="center">
    <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/misc_images/Predictions%200%20to%207.png" width="60%">
    
