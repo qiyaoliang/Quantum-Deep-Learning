@@ -25,19 +25,20 @@ Beginning with a 1-qubit layer in the neural network architecture used to identi
     * mnist01-ryN-v1.ipynb: first extension of 1-qubit architecture; uses hard-coded circuit (4 qubits). Neural net and quantum circuit not working.
     * mnist01-ryN-v2.ipynb: adjustable NUM_qubits, quantum layer returns NUM_QUBIT outputs representing expected value for the ZZ...Z operator, calculated from the counts returned by the circuit
     * mnist01-ryN-v3.ipynb: adjustable NUM_qubits, quantum layer returns 2^(NUM_QUBIT) outputs representing expected value of each unique permutation of measurements (e.g. '0000', '0001', '0010', etc.). Although this works well for classifying 0 and 1 (near perfect accuracy), this measurement does not scale well to classifications of a higher number of classes, such as of the digits 0-9 (see below in Summary & Discussion for explanation).
-* **MNIST01-bell:** Now, we try using the 'bell' circuit, which employs a dynamic number of qubits. This generates **ENTANGLEMENT**! We wanted to see how this would perform compared to the other circuits, which mostly have isolated qubits which don't interact with each other. The results were good! Best accuracy: 99.8% accurate (1712/1715 *previously unseen* test images correct) after training on 300 images.
+* **MNIST01-bell:** Now, we try using the 'bell' circuit, which employs a dynamic number of qubits. This generates **ENTANGLEMENT**! We wanted to see how this would perform compared to the other circuits, which mostly have isolated qubits which don't interact with each other. The results were ***remarkable***! Best accuracy: 99.8% accurate (1712/1715 *previously unseen* test images correct) after training on 300 images.
 ![bell Circuit Drawing]<p align="center">
    <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-bell/Figures/4-qubit%20circuit%20bell.jpg" width="60%">
-    * mnist01-bell.ipynb: current implementation uses 5 qubits and takes 1 measurement, resulting with 2 outputs (representing counts) for each of 0 and 1.
+    * mnist01-bell.ipynb: current implementation uses 5 qubits and takes 1 measurement, resulting with 2 outputs (representing counts) for each of 0 and 1. Here are some sample predictions:
+   <p align="center">
+      <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/misc_images/MNIST01-prediction-samples.jpg" width = "60%">
 * **MNIST01-QAOA:** Using 2 qubits, we try to create a circuit modeling the popular QAOA.
 ![QAOA Circuit Drawing]<p align="center">
    <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-QAOA/Figures/2-qubit%20circuit%20ryN.jpg" width="60%">
-* **MNIST01-NControlledUnitary:**
-   
+* **
 ## Potential Applications:  
 There could be many applications for our project such as in virtual reality, 3D game design, autonomous vehicle, 3D modeling/reconstuction, etc.  
 ## Summary of Results & Discussion
-* Don't need more qubits than necessary
+* An important takeaway is that *choosing the right number of qubits for the task* is a key part of the task. For simpler training on 't need more qubits than necessary
 * Returning 2^NUM_QUBITS does not work as intended; this is because the circuit "thinks" that there should be some correlation with measurements that differ only by a little. For example, let's say we are trying to get the measurements of a 4-qubit circuit to match the binary encoding of the digits 0 to 9. There are a few unintended problems that manifest using this result. An easy thing to see is that, once can see that the first, most significant bit is only '1' for the numbers 8 and 9 ('1000' and '1001', respectively). Thus, the neural net would be trained to "know" that a guess of '0' for this bit leads to a higher chance of getting the classification right (80% of the time). This is a manifestation of greater problems, such as the fact that the layer treats numbers that are close in binary (such as '0111' [7] and '0101' [3]) are close, since their binary representations are only a single digit off, even though they appear very different when written. So, it's likely that only a certain subset of these output 
 ## Further Development:  
 We hope that we can continue to train and improve our model with more data and that our project would eventually be of use for deployment in real-world applications.
