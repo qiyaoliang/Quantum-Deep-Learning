@@ -12,10 +12,7 @@ By following the example of Hybrid Quantum-Classical Neural Networks from the Qi
 Beginning with a 1-qubit layer in the neural network architecture used to identify handwritten 0 and 1 digits from the MNIST dataset, we have extended to implementing more complicated circuits, including using u3 (Unitary 3), Ry (rotation operation around the y-axis), and QFT (Quantum Fourier Transform) through PyTorch and Qiskit. Subsequently, we utilized the QuantumCircuit module in Qiskit we started developing an adaptable method to create any number of qubits we want! 
 
 #### Summary of Notebooks and Progress Made:
-* **MNIST01-u3:** The first step involved improving the 1-qubit with a single Ry architecture to a more complex design: using a U3 transformation with parameters `theta`, `phi`, and `lambda`. Best accuracy: 97% on training data (100 images)
-<p align="center">
-   <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-u3/Figures/1-qubit%20u3-circuit.jpg" width="60%">
-   
+* **MNIST01-u3:** The first step involved improving the 1-qubit with a single Ry architecture to a more complex design: using a U3 transformation with parameters `theta`, `phi`, and `lambda`. Best accuracy: 97% on training data (100 images)<p align="center"><img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-u3/Figures/1-qubit%20u3-circuit.jpg" width="60%">
   * mnist01-u3.ipynb: heavily borrowed and improved from QizGloria, winners of 2019 Qiskit Camp Europe: https://github.com/BoschSamuel/QizGloria/blob/master/Notebooks/pytorch-qiskit-0.1-u3.ipynb
 
 * **MNIST01-QFT:** Quantum Fourier Transform is commonly used in quantum algorithms, so we tried to implement this circuit next to train our model.
