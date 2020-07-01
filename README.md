@@ -28,7 +28,7 @@ Beginning with a 1-qubit layer in the neural network architecture used to identi
 * **MNIST01-bell:** Now, we try using the 'bell' circuit, which employs a dynamic number of qubits. This generates **ENTANGLEMENT**! We wanted to see how this would perform compared to the other circuits, which mostly have isolated qubits which don't interact with each other. The results were ***remarkable***! Best accuracy: 99.8% accurate (1712/1715 *previously unseen* test images correct) after training on 300 images.
 ![bell Circuit Drawing]<p align="center">
    <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-bell/Figures/4-qubit%20circuit%20bell.jpg" width="60%">
-    * mnist01-bell.ipynb: current implementation uses 5 qubits and takes 1 measurement, resulting with 2 outputs (representing counts) for each of 0 and 1. Here are some sample predictions:
+    * mnist01-bell.ipynb: current implementation uses 4 qubits and takes 1 measurement, resulting with 2 outputs (representing counts) for each of 0 and 1. Here are some sample predictions (again, for random, previously unseen test images):
    <p align="center">
       <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/misc_images/MNIST01-prediction-samples.jpg" width = "60%">
 * **MNIST01-QAOA:** Using 2 qubits, we try to create a circuit modeling the popular QAOA.
