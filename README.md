@@ -25,8 +25,7 @@ Beginning with a 1-qubit layer in the neural network architecture used to identi
 * **MNIST01-NControlledUnitary:**
 ## Potential Applications:  
 There could be many applications for our project such as in virtual reality, 3D game design, autonomous vehicle, 3D modeling/reconstuction, etc.  
-## Results
-
+## Summary of Results
 We hope to train a model that could be readily used for depth perception.  
 ## Further Development:  
 We hope that we can continue to train and improve our model with more data and that our project would eventually be of use for deployment in real-world applications.
