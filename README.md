@@ -1,8 +1,7 @@
 # Quantum Deep Learning with Qiskit  
 ### Team Ube Pancake  
 ## Project Background and Overview  
-Recent advances in many fields have accelerated the demand for classification, regression, and detection problems from few 2D images/projections. Often, the heart of these modern techniques utilize neural networks, which can be implemented with deep learning algorithms. In our project, we wish to implement and extend a quantum analog of the classical implementation following the example of Hybrid quantum-classical Neural Networks with PyTorch and Qiskit, an example from the Qiskit Textbook (https://qiskit.org/textbook/ch-machine-learning/machine-learning-qiskit-pytorch.html#quantumlayer).  
-tations with more complex circuits and more complex classification tasks. 
+Recent advances in many fields have accelerated the demand for classification, regression, and detection problems from few 2D images/projections. Often, the heart of these modern techniques utilize neural networks, which can be implemented with deep learning algorithms. In our project, we wish to implement and extend a quantum analog of the classical implementation following the example of Hybrid quantum-classical Neural Networks with PyTorch and Qiskit, an example from the Qiskit Textbook (https://qiskit.org/textbook/ch-machine-learning/machine-learning-qiskit-pytorch.html#quantumlayer). 
 ## Implementation:  
 By following the example of Hybrid Quantum-Classical Neural Networks from the Qiskit Textbook, we extend it to include implementations with more complex circuits and more complex classification tasks. 
 #### Steps Taken:
