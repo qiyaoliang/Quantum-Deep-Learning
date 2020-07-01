@@ -21,6 +21,8 @@ Beginning with a 1-qubit layer in the neural network architecture used to identi
 * **MNIST01-bell:** Best accuracy: 99.8% accurate (1712/1715 *previously unseen* test images correct) after training on 300 images.
 ![bell Circuit Drawing](https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-bell/Figures/4-qubit%20circuit%20bell.jpg)
     * mnist01-bell.ipynb: uses 1 measurement, quantum layer returns 2 outputs (representing counts) for 0 and 1.
+* **MNIST01-QAOA:** Using 2 qubits, we try to create a circuit modeling the popular QAOA.
+![QAOA Circuit Drawing](https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-QAOA/Figures/2-qubit%20circuit%20ryN.jpg)
 * **MNIST01-NControlledUnitary:**
 ## Potential Applications:  
 There could be many applications for our project such as in virtual reality, 3D game design, autonomous vehicle, 3D modeling/reconstuction, etc.  
