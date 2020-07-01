@@ -3,7 +3,14 @@
 ## Project Background and Overview  
 Recent advances in many fields have accelerated the demand for classification, regression, and detection problems from few 2D images/projections. Often, the heart of these modern techniques utilize neural networks, which can be implemented with deep learning algorithms. In our project, we implement and extend a quantum analog of the classical implementation following the example of Hybrid quantum-classical Neural Networks with PyTorch and Qiskit, [an example from the Qiskit Textbook](https://qiskit.org/textbook/ch-machine-learning/machine-learning-qiskit-pytorch.html#quantumlayer). 
 
-**For our most RECENT work, see folder [MNIST/0-7 3-qubit](https://github.com/liangqiyao990210/Quantum-Deep-Learning/tree/master/MNIST/0-7%203qubits%2010epochs%2095%25), where we train our hybrid quantum-classical network to get 94.7% accuracy on MNIST handwritten digits from 0 to 7. [Click here view our presentation slides (PDF).](https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/Quantum%20Deep%20Learning.pdf) [PPTX Version](https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/Quantum%20Deep%20Learning.pptx)**
+**For our most RECENT work, see folder [MNIST/0-7 3-qubit](https://github.com/liangqiyao990210/Quantum-Deep-Learning/tree/master/MNIST/0-7%203qubits%2010epochs%2095%25), where we train our hybrid quantum-classical network to get 94.7% accuracy on MNIST handwritten digits from 0 to 7.**
+
+## Video and Presentation:
+#### Video
+[Link to YouTube video](https://youtu.be/dlIZVF9xVpU)
+
+#### Presentation
+[Click here view our presentation slides (PDF).](https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/Quantum%20Deep%20Learning.pdf) [PPTX Version](https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/Quantum%20Deep%20Learning.pptx)
 
 ## Implementation:  
 By following the example of Hybrid Quantum-Classical Neural Networks from the Qiskit Textbook, we extend it to include implementations with more complex circuits and more complex classification tasks. 
@@ -29,7 +36,7 @@ Beginning with a 1-qubit layer in the neural network architecture used to identi
       <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/misc_images/MNIST01-prediction-samples.jpg" width = "60%">
     
 * **MNIST01-QAOA:** Using 2 qubits, we try to create a circuit modeling the popular QAOA. Currently, the training loss does not converge, so fixes must be added before the model will train and predict well!<p align="center"><img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-QAOA/Figures/2-qubit%20circuit%20ryN.jpg" width="60%">
- * mnist01-QAOA.ipynb: Currently having problems running inside the model! Deprecated in favor of training MNIST, but potential improvements may be implemented in the future.
+  * mnist01-QAOA.ipynb: Currently having problems running inside the model! Deprecated in favor of training MNIST, but potential improvements may be implemented in the future.
 
 * **MNIST:** In the most recent step of our project, we extended our learning about the Qiskit + Pytorch framework to classifying a higher number of classes, where we try classifying the digits from 0 to 7.  By tweaking hyperparameters and the number of qubits, we reached a **stunning 94.7% accuracy** on classifying 1200 previously unseen test images from 0 to 7.
   * Each subfolder is named by [0-5 or 0-7] [# of qubits] [# epochs] [% accuracy on test data], and each folder contains a screenclip of the final accuracy, the graph of training loss over each epoch, sample predicitons of test data, and the iPython notebook used.
