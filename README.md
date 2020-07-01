@@ -51,13 +51,3 @@ We hope that we can continue to train and improve our model with more data and t
 *** Note: this is a project for submission in the IBM Qiskit Community SummerJam Quantum Hackathon (North Carolina) ***
 
 <center><img src="https://i.ebayimg.com/images/g/HH4AAOSwPW9esi90/s-l400.jpg"></center>
-
-    * mnist01-ryN-v3.ipynb: adjustable NUM_qubits, 
-* **MNIST01-bell:** 
-* **MNIST01-NControlledUnitary:**
-## Further Development:  
-We hope that we can continue to train and improve our model with more data and that our project would eventually be of use for deployment in real-world applications.
-
-*** Note: this is a project for submission in the IBM Qiskit Community SummerJam Quantum Hackathon (North Carolina) ***
-
-<center><img src="https://i.ebayimg.com/images/g/HH4AAOSwPW9esi90/s-l400.jpg"></center>
