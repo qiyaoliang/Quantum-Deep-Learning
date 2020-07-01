@@ -16,7 +16,7 @@ Beginning with a 1-qubit layer in the neural network architecture used to identi
    <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-u3/Figures/1-qubit%20u3-circuit.jpg" width="60%">
     * mnist01-u3.ipynb: heavily borrowed and improved from QizGloria, winners of 2019 Qiskit Camp Europe: https://github.com/BoschSamuel/QizGloria/blob/master/Notebooks/pytorch-qiskit-0.1-u3.ipynb
 
-* **MNIST01-QFT:**
+* **MNIST01-QFT:** Quantum Fourier Transform is commonly used in quantum algorithms, so we tried to implement this circuit next to train our model.
 ![QFT Circuit Drawing]<p align="center">
    <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-QFT/Figures/qft-circuit.jpg" width="60%">
     * mnist01-qft.ipynb: in progress implementation of Quantum Fourier Transform
@@ -41,6 +41,9 @@ Beginning with a 1-qubit layer in the neural network architecture used to identi
 
 * **MNIST** In the most recent step of our project, we extended our learning about the Qiskit + Pytorch framework to classifying a higher number of classes, where we try classifying the digits from 0 to 7.  By tweaking hyperparameters and the number of qubits, we reached a **stunning 94.7% accuracy** on classifying 1200 previously unseen test images from 0 to 7.
     * Each subfolder is named by [0-5 or 0-7] [# of qubits] [# epochs] [% accuracy on test data], and each folder contains a screenclip of the final accuracy, the graph of training loss over each epoch, sample predicitons of test data, and the iPython notebook used.
+    * Here is a sample of predictions for labels on test images from the 07 3qubit 10epochs 95% run:
+    <p align="center">
+   <img src="https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/misc_images/Predictions%200%20to%207.png" width="60%">
    
 ## Summary of Results & Discussion
 * Hybrid NNs could have potential applications for NISQ devices!! (Using Qiskit and Pytorch)
