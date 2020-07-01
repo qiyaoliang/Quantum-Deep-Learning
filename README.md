@@ -1,7 +1,7 @@
 # Quantum Deep Learning with Qiskit  
 ### Team Ube Pancake  
 ## Project Background and Overview  
-Recent advances in many fields have accelerated the demand for classification, regression, and detection problems from few 2D images/projections. Often, the heart of these modern techniques utilize neural networks, which can be implemented with deep learning algorithms. In our project, we wish to implement and extend a quantum analog of the classical implementation following the example of Hybrid quantum-classical Neural Networks with PyTorch and Qiskit, an example from the Qiskit Textbook (https://qiskit.org/textbook/ch-machine-learning/machine-learning-qiskit-pytorch.html#quantumlayer). 
+Recent advances in many fields have accelerated the demand for classification, regression, and detection problems from few 2D images/projections. Often, the heart of these modern techniques utilize neural networks, which can be implemented with deep learning algorithms. In our project, we implement and extend a quantum analog of the classical implementation following the example of Hybrid quantum-classical Neural Networks with PyTorch and Qiskit, an example from the Qiskit Textbook (https://qiskit.org/textbook/ch-machine-learning/machine-learning-qiskit-pytorch.html#quantumlayer). 
 **For our most RECENT work, see folder [MNIST/0-7 3-qubit](https://github.com/liangqiyao990210/Quantum-Deep-Learning/tree/master/MNIST/0-7%203qubits%2010epochs%2095%25), where we train our hybrid quantum-classical network to get 94.7% accuracy on MNIST handwritten digits from 0 to 7. [Click here view our presentation slides (PDF).](https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/Quantum%20Deep%20Learning.pdf) [PPTX Version](https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/Quantum%20Deep%20Learning.pptx)**
 
 ## Implementation:  
@@ -43,6 +43,7 @@ Beginning with a 1-qubit layer in the neural network architecture used to identi
     * Each subfolder is named by [0-5 or 0-7] [# of qubits] [# epochs] [% accuracy on test data], and each folder contains a screenclip of the final accuracy, the graph of training loss over each epoch, sample predicitons of test data, and the iPython notebook used.
    
 ## Summary of Results & Discussion
+* Hybrid NNs could have potential applications for NISQ devices!! (Using Qiskit and Pytorch)
 * Through this project, we gained a deeper understanding of Qiskit's circuit-building and integration with the popular package Pytorch. After playing with different circuit structures, data, training hyperparameters, and model architectures, we fine-tuned our model to fit it for the right task.
 * An important takeaway is that *choosing the right number of qubits for the task* is a key part. For simpler training (e.g. distinguishing MNIST's 0's and 1's), we don't need more qubits than necessary.
 * Another key was 
@@ -52,7 +53,20 @@ Beginning with a 1-qubit layer in the neural network architecture used to identi
 In the realm of classification tasks, there are many obvious places where this project could be used. Beyond classification, hybrid quantum-classical neural net architectures could be deployed in many data-intensive applications, such as in virtual reality, 3D game design, autonomous vehicle, 3D modeling/reconstuction, etc.  
 
 ## Further Development:  
-We hope that we can continue to train and improve our model with more data and that our project would eventually be of use for deployment in real-world applications.
+Below are some of the short-term improvements we can make on the project to extend this towards real-world application:
+1. Try out different classification problems:
+    * MNIST Fashion, Cats and dogs, etc. 
+2. Try out different circuits:
+    * Investigate the differences between multiple parameters per single qubit versus multiple qubits each with a single parameter
+    * Try out more complex circuits, composite circuits, entanglement-generating circuits, n-controlled unitary, etc. (in progress)
+    * Explore suitable circuits for specific problems
+3. Implement CUDA for GPU acceleration of training
+4. Implement on NISQ devices (IBM quantum hardware) - already begun:
+    * Try training our neural nets on the actual IBM machine (have attempted)
+    * Compare results from an actual hardware with that from the simulator
+    * Implement QECCs (Quantum Error Correction)
+
+Beyong classification tasks, we hope that we can continue to train and improve our model with more data and that our project would eventually be of use for deployment in real-world applications, and personally become involved in this field of research with IBM!
 
 *** Note: this is a project for submission in the IBM Qiskit Community SummerJam Quantum Hackathon (North Carolina) ***
 
