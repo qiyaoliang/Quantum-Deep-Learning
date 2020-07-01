@@ -17,15 +17,16 @@ Beginning with a 1-qubit layer in the neural network architecture used to identi
 ![ryN Circuit Drawing](https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-ryN/Figures/4-qubit%20circuit%20ryN.jpg)
     * mnist01-ryN-v1.ipynb: first extension of 1-qubit architecture; uses hard-coded circuit (4 qubits). Neural net and quantum circuit not working.
     * mnist01-ryN-v2.ipynb: adjustable NUM_qubits, quantum layer returns NUM_QUBIT outputs representing expected value for the $ZZ...Z$ operator, calculated from the counts returned by the circuit
-    * mnist01-ryN-v3.ipynb: adjustable NUM_qubits, quantum layer returns 2^(NUM_QUBIT) outputs representing expected value of each unique permutation of measurements (e.g. '0000', '0001', '0010', etc.).
+    * mnist01-ryN-v3.ipynb: adjustable NUM_qubits, quantum layer returns 2^(NUM_QUBIT) outputs representing expected value of each unique permutation of measurements (e.g. '0000', '0001', '0010', etc.). Although this works well for classifying 0 and 1 (near perfect accuracy), this measurement does not scale well to classifications of a higher number of classes, such as of the digits 0-9 (see below in Summary & Discussion for explanation).
 * **MNIST01-bell:** Best accuracy: 99.8% accurate (1712/1715 *previously unseen* test images correct) after training on 300 images.
 ![bell Circuit Drawing](https://github.com/liangqiyao990210/Quantum-Deep-Learning/blob/master/MNIST01-bell/Figures/4-qubit%20circuit%20bell.jpg)
     * mnist01-bell.ipynb: uses 1 measurement, quantum layer returns 2 outputs (representing counts) for 0 and 1.
 * **MNIST01-NControlledUnitary:**
 ## Potential Applications:  
 There could be many applications for our project such as in virtual reality, 3D game design, autonomous vehicle, 3D modeling/reconstuction, etc.  
-## Summary of Results
-We hope to train a model that could be readily used for depth perception.  
+## Summary of Results & Discussion
+* Don't need more qubits than necessary
+* Returning 2^NUM_QUBITS does not work as intended; this is because the circuit "thinks" that there should be some correlation with measurements that differ only by a little. For example, let's say we are trying to get the measurements of a 4-qubit circuit to match the binary encoding of the digits 0 to 9. There are a few unintended problems that manifest using this result. An easy thing to see is that, once can see that the first, most significant bit is only '1' for the numbers 8 and 9 ('1000' and '1001', respectively). Thus, the neural net would be trained to "know" that a guess of '0' for this bit leads to a higher chance of getting the classification right (80% of the time). This is a manifestation of greater problems, such as the fact that the layer treats numbers that are close in binary (such as '0111' [7] and '0101' [3]) are close, since their binary representations are only a single digit off, even though they appear very different when written. So, it's likely that only a certain subset of these output 
 ## Further Development:  
 We hope that we can continue to train and improve our model with more data and that our project would eventually be of use for deployment in real-world applications.
 
